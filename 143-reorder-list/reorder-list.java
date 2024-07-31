@@ -11,46 +11,14 @@
 class Solution {
     public void reorderList(ListNode head) {
 
-    //     ListNode fast = head;
-    //     ListNode slow = head;
-
-    //     while(fast.next != null && fast.next.next != null){
-    //         fast = fast.next.next;
-    //         slow = slow.next;
-    //     }
-
-    //     ListNode next;
-    //     ListNode prev = slow;
-    //     ListNode curr = slow.next;
-
-    //     while(curr != null){
-    //         next = curr.next;
-    //         curr.next = prev;
-    //         prev = curr;
-    //         curr = next;
-    //     }
-
-    //     ListNode first = head;
-    //     ListNode last = prev;
-    //     ListNode temp1=head;
-    //     ListNode temp2;
-
-
-    //     while(temp1 != null){
-    //         temp1 = first.next;
-    //         first.next = last;
-    //         temp2 = last.next;
-    //         first = temp1;
-    //         last.next = first;
-    //         last = temp2;
-    //     }
-
     //Find middle of list using a slow and fast pointer approach
+
+        ListNode fast = head;
         ListNode slow = head;
-        ListNode fast = head.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
+
+        while(fast.next != null && fast.next.next != null){
             fast = fast.next.next;
+            slow = slow.next;
         }
 
         //Reverse the second half of the list using a tmp variable
