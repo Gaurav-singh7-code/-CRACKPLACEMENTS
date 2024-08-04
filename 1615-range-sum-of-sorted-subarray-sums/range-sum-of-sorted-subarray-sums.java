@@ -22,10 +22,10 @@ class Solution {
         int b = 0;
 
         for(int i = left-1; i < right; i++){
-            b += arr[i];
+            b = (b+ arr[i]) % MOD;
         }
 
-        return b % MOD;
+        return b;
         
     }
 }
